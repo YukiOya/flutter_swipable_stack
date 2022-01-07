@@ -3,8 +3,9 @@ part of '../swipable_stack.dart';
 /// Callback called when the Swipe is completed.
 typedef SwipeCompletionCallback = void Function(
   int index,
-  SwipeDirection direction,
-);
+  SwipeDirection direction, {
+  dynamic arguments,
+});
 
 /// Callback called just before launching the Swipe action.
 typedef OnWillMoveNext = bool Function(
