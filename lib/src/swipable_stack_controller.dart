@@ -81,12 +81,14 @@ class SwipableStackController extends ChangeNotifier {
     bool shouldCallCompletionCallback = true,
     bool ignoreOnWillMoveNext = false,
     Duration? duration,
+    dynamic arguments,
   }) {
     _swipableStackStateKey.currentState?._next(
       swipeDirection: swipeDirection,
       shouldCallCompletionCallback: shouldCallCompletionCallback,
       ignoreOnWillMoveNext: ignoreOnWillMoveNext,
       duration: duration,
+      arguments: arguments,
     );
   }
 

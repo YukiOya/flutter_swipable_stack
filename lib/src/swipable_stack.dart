@@ -621,6 +621,7 @@ class _SwipableStackState extends State<SwipableStack>
     required bool shouldCallCompletionCallback,
     required bool ignoreOnWillMoveNext,
     Duration? duration,
+    dynamic arguments,
   }) {
     if (!canAnimationStart) {
       return;
@@ -674,6 +675,7 @@ class _SwipableStackState extends State<SwipableStack>
           widget.onSwipeCompleted?.call(
             _currentIndex,
             swipeDirection,
+            arguments: arguments,
           );
         }
         animation.removeListener(animate);
